@@ -1,6 +1,6 @@
 {
   "name": "@heiwa4126/hello",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "NPM package tutorial",
   "type": "commonjs",
   "main": "src/index.js",
