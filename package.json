@@ -1,0 +1,53 @@
+{
+  "name": "@heiwa4126/hello",
+  "version": "0.0.0",
+  "description": "NPM package tutorial",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "bin": {
+    "heiwa4126-hello": "./src/cli.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "tape __tests__/**/*.test.js",
+    "lint": "biome lint ./src",
+    "fix": "biome check --apply ./src",
+    "lint:package": "npmPkgJsonLint ./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heiwa4126/npm-hello.git"
+  },
+  "keywords": [
+    "demo",
+    "tutorial",
+    "template"
+  ],
+  "author": {
+    "name": "heiwa4126",
+    "email": "heiwa4126@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heiwa4126/npm-hello/issues"
+  },
+  "homepage": "https://github.com/heiwa4126/npm-hello#readme",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "src/"
+  ],
+  "ignore": [
+    "**/*.test.js/",
+    "**/.DS_Store",
+    "temp/"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "npm-package-json-lint": "~7",
+    "tape": "~5"
+  }
+}
