@@ -6,8 +6,9 @@ name: Node.js Package
 on:
   push:
     tags:
-      - '[0-9]+\.[0-9]+\.[0-9]+'
-
+      - 'v[0-9]+\.[0-9]+\.[0-9]+(-[0-9a-zA-Z]+)?'
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest

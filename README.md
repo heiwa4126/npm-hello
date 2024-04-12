@@ -43,7 +43,7 @@ npx @heiwa4126/hello
 
 が書いてあります。
 
-また数字のみの git タグ(例:"1.0.0")をつけて、
+また数字のみの git タグ(例:"v1.0.0")をつけて、
 GitHub に push すると
 GitHub Packages が生成される
 GitHub Actions が書いてあります
