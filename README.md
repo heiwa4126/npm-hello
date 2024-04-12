@@ -42,3 +42,13 @@ npx @heiwa4126/hello
 - `npm run lint:package` - [npm-package-json-lint](https://www.npmjs.com/package/npm-package-json-lint) による package.json の lint
 
 が書いてあります。
+
+また数字のみの git タグ(例:"1.0.0")をつけて、
+GitHub に push すると
+GitHub Packages が生成される
+GitHub Actions が書いてあります
+([release-package.yml](.github/workflows/release-package.yml))。
+
+GitHub Packages については
+[GitHub Packages のクイックスタート - GitHub Docs](https://docs.github.com/ja/packages/quickstart)
+を参照してください。
