@@ -1,6 +1,6 @@
 {
 	"name": "@heiwa4126/hello",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "NPM package tutorial",
 	"type": "commonjs",
 	"main": "src/index.js",
@@ -25,7 +25,11 @@
 		"type": "git",
 		"url": "git+https://github.com/heiwa4126/npm-hello.git"
 	},
-	"keywords": ["demo", "tutorial", "template"],
+	"keywords": [
+		"demo",
+		"tutorial",
+		"template"
+	],
 	"author": {
 		"name": "heiwa4126",
 		"email": "heiwa4126@gmail.com"
@@ -35,8 +39,17 @@
 		"url": "https://github.com/heiwa4126/npm-hello/issues"
 	},
 	"homepage": "https://github.com/heiwa4126/npm-hello#readme",
-	"files": ["package.json", "README.md", "LICENSE", "src/"],
-	"ignore": ["**/*.test.js/", "**/.DS_Store", "temp/"],
+	"files": [
+		"package.json",
+		"README.md",
+		"LICENSE",
+		"src/"
+	],
+	"ignore": [
+		"**/*.test.js/",
+		"**/.DS_Store",
+		"temp/"
+	],
 	"devDependencies": {
 		"@biomejs/biome": "^1.6.4",
 		"npm-package-json-lint": "~7",
