@@ -11,7 +11,8 @@
 		"node": ">=16"
 	},
 	"scripts": {
-		"start": "node src/cli.js",
+		"linklocal": "bin/linklocal.sh",
+		"cli": "node src/cli.js",
 		"example": "node ./examples/ex1.js",
 		"example2": "node ./examples/ex2.js",
 		"test": "tape __tests__/**/*.test.js",
