@@ -40,10 +40,20 @@ npx @heiwa4126/hello
 - `npm run lint` - [biome](https://www.npmjs.com/package/@biomejs/biome) による lint
 - `npm run fix` - biome による [安全な修正(Safe fixes)](https://biomejs.dev/ja/linter/#%E5%AE%89%E5%85%A8%E3%81%AA%E4%BF%AE%E6%AD%A3safe-fixes)
 - `npm run lint:package` - [npm-package-json-lint](https://www.npmjs.com/package/npm-package-json-lint) による package.json の lint
+- `npm run linklocal` - 自分自身のリンクを node_modules の下に作る。Python の editable mode (`pip install -e`) に相当する。多分 Linux でしか動かない
 
 が書いてあります。
 
-また数字のみの git タグ(例:"v1.0.0")をつけて、
+レポジトリからクローンしたら
+
+```sh
+npm i
+npm run linklocal  # オプション
+```
+
+で始めて作業してください。
+
+また数字のみの git タグ(例:"v1.0.0","v1.0.0-0"など)をつけて、
 GitHub の main ブランチに push すると
 GitHub Packages が生成される
 GitHub Actions が書いてあります
