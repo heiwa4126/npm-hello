@@ -54,8 +54,7 @@ npm run linklocal  # オプション
 で始めて作業してください。
 
 また数字のみの git タグ(例:"v1.0.0","v1.0.0-0"など)をつけて、
-main ブランチを
-GitHub に `git push --tags` すると
+main ブランチを GitHub に `git push --tags` すると
 GitHub Packages が生成される
 GitHub Actions が書いてあります
 ([release-package.yml](.github/workflows/release-package.yml))。
