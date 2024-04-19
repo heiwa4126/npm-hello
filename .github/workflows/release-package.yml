@@ -1,21 +1,17 @@
 name: Node.js Package
 
-# on:
-#   release:
-#     types: [created]
 on:
   push:
     tags:
-      # - 'v[0-9]+\.[0-9]+\.[0-9]+(-[0-9a-zA-Z]+)?'
-      # - "*"
-      - "v[0-9]+.[0-9]+.[0-9]+"
-    # branches:
-    #   - main
+      - "v[0-9]+.[0-9]+.[0-9]+**"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.push.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 16
@@ -30,6 +26,8 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.push.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 16
