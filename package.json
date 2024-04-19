@@ -20,7 +20,7 @@
 		"fix": "biome check --apply ./src ./__tests__",
 		"lint:package": "npmPkgJsonLint .",
 		"fix:package": "npm pkg fix",
-		"publish": "npm publish --access=public"
+		"publish:npmjs": "npm publish --access=public"
 	},
 	"repository": {
 		"type": "git",
