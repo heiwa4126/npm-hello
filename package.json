@@ -45,6 +45,7 @@
 		"fix:package": "npm pkg fix",
 		"publish:npmjs": "npm publish --access=public",
 		"prepublishOnly": "node scripts/clean-package.cjs",
-		"postpublish": "node scripts/restore-package.cjs"
+		"postpublish": "node scripts/restore-package.cjs",
+		"pack": "npm run prepublishOnly && npm pack && npm run postpublish"
 	}
 }
