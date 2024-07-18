@@ -6,7 +6,7 @@ const backupPath = path.join(__dirname, "..", "package.json.bak");
 
 // オリジナルのpackage.jsonを読み込む
 const packageJson = require(packagePath);
-console.log(packageJson);
+// console.log(packageJson);
 
 // バックアップを作成
 fs.writeFileSync(backupPath, JSON.stringify(packageJson, null, 2));
@@ -16,7 +16,7 @@ fs.writeFileSync(backupPath, JSON.stringify(packageJson, null, 2));
 const postpublishScript = packageJson.scripts.postpublish;
 
 // scriptsオブジェクトを削除
-delete packageJson.scripts;
+packageJson.scripts = undefined;
 
 // postpublishスクリプトだけを再追加
 packageJson.scripts = {
