@@ -10,29 +10,11 @@
 	"engines": {
 		"node": ">=16"
 	},
-	"scripts": {
-		"cli": "node src/cli.js",
-		"linklocal": "bin/linklocal.sh",
-		"ex1": "node ./examples/ex1.js",
-		"ex2": "node ./examples/ex2.js",
-		"test": "tape __tests__/**/*.test.js",
-		"format": "biome format --write .",
-		"lint": "biome lint .",
-		"check": "biome check --apply .",
-		"lint:package": "npmPkgJsonLint .",
-		"actionlint": "actionlint .github/**/*.yml",
-		"fix:package": "npm pkg fix",
-		"publish:npmjs": "npm publish --access=public"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/heiwa4126/npm-hello.git"
 	},
-	"keywords": [
-		"demo",
-		"tutorial",
-		"template"
-	],
+	"keywords": ["demo", "tutorial", "template"],
 	"author": {
 		"name": "heiwa4126",
 		"email": "heiwa4126@gmail.com"
@@ -42,21 +24,27 @@
 		"url": "https://github.com/heiwa4126/npm-hello/issues"
 	},
 	"homepage": "https://github.com/heiwa4126/npm-hello#readme",
-	"files": [
-		"package.json",
-		"README.md",
-		"LICENSE",
-		"src/"
-	],
-	"ignore": [
-		"**/*.test.js/",
-		"**/.DS_Store",
-		"temp/"
-	],
+	"files": ["package.json", "README.md", "LICENSE", "src/"],
+	"ignore": ["**/*.test.js/", "**/.DS_Store", "temp/"],
 	"devDependencies": {
 		"@biomejs/biome": "^1.6.4",
 		"npm-package-json-lint": "~8",
 		"tape": "~5"
 	},
-	"packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195"
+	"scripts": {
+		"cli": "node src/cli.js",
+		"linklocal": "bin/linklocal.sh",
+		"ex1": "node ./examples/ex1.js",
+		"ex2": "node ./examples/ex2.js",
+		"test": "tape __tests__/**/*.test.js",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"check": "biome check --write .",
+		"lint:package": "npmPkgJsonLint .",
+		"actionlint": "actionlint .github/**/*.yml",
+		"fix:package": "npm pkg fix",
+		"publish:npmjs": "npm publish --access=public",
+		"prepublishOnly": "node scripts/clean-package.cjs",
+		"postpublish": "node scripts/restore-package.cjs"
+	}
 }
