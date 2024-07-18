@@ -3,7 +3,8 @@ name: Node.js Package
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+**"
+      # - "v[0-9]+.[0-9]+.[0-9]+**" # prerelease version
+      - "v[0-9]+.[0-9]+.[0-9]"
 
 jobs:
   build:
