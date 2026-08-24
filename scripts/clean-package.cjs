@@ -20,7 +20,7 @@ packageJson.scripts = undefined;
 
 // postpublishスクリプトだけを再追加
 packageJson.scripts = {
-	postpublish: postpublishScript,
+	postpublish: postpublishScript
 };
 
 // 更新されたpackage.jsonを書き込む
